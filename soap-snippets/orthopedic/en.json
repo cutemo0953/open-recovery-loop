@@ -1,0 +1,40 @@
+{
+  "_disclaimer": "Reference framework only. Not medical advice.",
+  "subjectiveNotes": {
+    "painWorse": "Pain worsened",
+    "painBetter": "Pain improved",
+    "stiffKnee": "Knee stiffness",
+    "romImproved": "ROM improved",
+    "nightPain": "Night pain",
+    "stairsDifficult": "Difficulty with stairs",
+    "walkDistanceUp": "Walking distance increased"
+  },
+  "objectiveNotes": {
+    "woundDryClean": "Wound dry and clean",
+    "woundRed": "Wound erythema",
+    "swellingMild": "Swelling mild",
+    "swellingModerate": "Swelling moderate",
+    "gaitLimp": "Gait: antalgic",
+    "gaitNormal": "Gait: normal",
+    "quadContractGood": "Quad contraction good",
+    "quadContractPoor": "Quad contraction poor",
+    "patellarMobilityLimited": "Patellar mobility limited"
+  },
+  "assessmentNotes": {
+    "progressNormal": "Recovery on track",
+    "progressSlow": "Recovery slower than expected",
+    "romPlateau": "ROM plateau",
+    "painControlled": "Pain well controlled",
+    "canAdvance": "Ready to advance phase",
+    "maintainPhase": "Maintain current phase"
+  },
+  "planNotes": {
+    "maintainRx": "Maintain current Rx",
+    "increaseFreq": "Increase frequency",
+    "addResistance": "Add resistance",
+    "reduceFreq": "Reduce frequency",
+    "followUp1w": "Follow-up in 1 week",
+    "followUp2w": "Follow-up in 2 weeks",
+    "referBack": "Refer back to surgeon"
+  }
+}

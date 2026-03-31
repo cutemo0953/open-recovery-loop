@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/open-rehab/open-recovery-loop/schema/protocol.schema.json",
+  "title": "Rehabilitation Protocol",
+  "description": "Schema for phase-based post-surgical rehabilitation protocols used in the Recovery Loop system.",
+  "type": "object",
+  "required": ["_disclaimer", "id", "procedure", "name", "version", "phases"],
+  "properties": {
+    "_disclaimer": {
+      "type": "string",
+      "description": "Medical disclaimer. Must be present in every protocol file."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+-v[0-9]+$",
+      "description": "Unique protocol identifier, e.g. 'tka-standard-v1'."
+    },
+    "procedure": {
+      "type": "string",
+      "description": "Surgery type code, e.g. 'TKA', 'THA', 'ACLR'."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable protocol name."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the protocol, e.g. '1.0'."
+    },
+    "supersedes": {
+      "type": "string",
+      "description": "ID of the protocol this version replaces, if any."
+    },
+    "phases": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/phase" },
+      "description": "Ordered list of rehabilitation phases."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "required": ["en"],
+      "properties": {
+        "en": { "type": "string" },
+        "zh": { "type": "string" },
+        "vi": { "type": "string" },
+        "id": { "type": "string" },
+        "es": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "description": "A string with translations. At least 'en' is required."
+    },
+    "localizedStringArray": {
+      "type": "object",
+      "required": ["en"],
+      "properties": {
+        "en": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "zh": { "type": "array", "items": { "type": "string" } },
+        "vi": { "type": "array", "items": { "type": "string" } },
+        "id": { "type": "array", "items": { "type": "string" } },
+        "es": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false,
+      "description": "An array of strings with translations. At least 'en' is required."
+    },
+    "romRange": {
+      "type": "object",
+      "required": ["min", "target"],
+      "properties": {
+        "min": { "type": "integer", "minimum": 0, "description": "Minimum acceptable value in degrees." },
+        "target": { "type": "integer", "minimum": 0, "description": "Target value in degrees." }
+      },
+      "additionalProperties": false
+    },
+    "romTargets": {
+      "type": "object",
+      "required": ["flexion", "extension"],
+      "properties": {
+        "flexion": { "$ref": "#/$defs/romRange" },
+        "extension": { "$ref": "#/$defs/romRange" }
+      },
+      "additionalProperties": false,
+      "description": "ROM targets for the phase."
+    },
+    "exercise": {
+      "type": "object",
+      "required": ["exerciseId", "sets", "reps", "frequency"],
+      "properties": {
+        "exerciseId": {
+          "type": "string",
+          "pattern": "^ex-",
+          "description": "Reference to an exercise definition, e.g. 'ex-quad-set'."
+        },
+        "sets": { "type": "integer", "minimum": 1 },
+        "reps": { "type": "integer", "minimum": 1 },
+        "holdSec": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Hold duration in seconds, for isometric or timed exercises."
+        },
+        "frequency": {
+          "type": "string",
+          "pattern": "^[0-9]+x/(day|week)$",
+          "description": "How often the exercise is performed, e.g. '2x/day' or '3x/week'."
+        }
+      },
+      "additionalProperties": false
+    },
+    "advancementCriteria": {
+      "type": "object",
+      "required": ["ptDecisionRequired"],
+      "properties": {
+        "minWeeks": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Minimum weeks post-op (or in phase) before advancement is considered."
+        },
+        "romFlexion": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Minimum flexion in degrees required to advance."
+        },
+        "romExtension": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Maximum extension deficit in degrees (0 = full extension)."
+        },
+        "painMax": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Maximum acceptable VAS pain score (0-10) to advance."
+        },
+        "effusionMax": {
+          "type": "string",
+          "enum": ["none", "trace", "mild", "moderate", "severe"],
+          "description": "Maximum acceptable effusion level."
+        },
+        "functionalGate": {
+          "type": "string",
+          "description": "Functional milestone that must be achieved, e.g. 'transfer_independently', 'stair_reciprocal'."
+        },
+        "ptDecisionRequired": {
+          "type": "boolean",
+          "description": "Whether a clinician must approve the phase transition."
+        }
+      },
+      "additionalProperties": false
+    },
+    "phase": {
+      "type": "object",
+      "required": ["phase", "name", "startWeek", "endWeek", "goals", "romTargets", "exercises", "advancementCriteria"],
+      "properties": {
+        "phase": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Phase number, starting from 0."
+        },
+        "name": { "$ref": "#/$defs/localizedString" },
+        "startWeek": {
+          "type": "integer",
+          "description": "Start week relative to surgery (negative for prehab)."
+        },
+        "endWeek": {
+          "type": "integer",
+          "description": "End week relative to surgery."
+        },
+        "goals": { "$ref": "#/$defs/localizedStringArray" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Optional tags for categorization, e.g. 'inpatient', 'pre-op'."
+        },
+        "romTargets": { "$ref": "#/$defs/romTargets" },
+        "exercises": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/exercise" },
+          "minItems": 1,
+          "description": "Exercises prescribed in this phase."
+        },
+        "restrictions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Activity restrictions during this phase."
+        },
+        "advancementCriteria": { "$ref": "#/$defs/advancementCriteria" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

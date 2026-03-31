@@ -1,0 +1,31 @@
+{
+  "_disclaimer": "Reference framework only. Not medical advice. Actual clinical decisions must be made by qualified healthcare professionals based on individual patient assessment.",
+  "id": "tka",
+  "procedure": "TKA (Total Knee Arthroplasty)",
+  "techniques": [
+    {
+      "type": "nerve_block",
+      "blockSite": "femoral",
+      "guidance": "ultrasound",
+      "medications": [
+        { "agent": "ropivacaine", "concentration": "0.12%", "volumeMl": 25, "route": "perineural" }
+      ]
+    },
+    {
+      "type": "nerve_block",
+      "blockSite": "adductor_canal",
+      "guidance": "ultrasound",
+      "medications": [
+        { "agent": "ropivacaine", "concentration": "0.25%", "volumeMl": 20, "route": "perineural" }
+      ]
+    },
+    {
+      "type": "nerve_block",
+      "blockSite": "ipack",
+      "guidance": "ultrasound",
+      "medications": [
+        { "agent": "ropivacaine", "concentration": "0.3%", "volumeMl": 20, "route": "perineural" }
+      ]
+    }
+  ]
+}

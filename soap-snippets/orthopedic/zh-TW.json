@@ -1,0 +1,40 @@
+{
+  "_disclaimer": "Reference framework only. Not medical advice.",
+  "subjectiveNotes": {
+    "painWorse": "疼痛加劇",
+    "painBetter": "疼痛改善",
+    "stiffKnee": "膝蓋僵硬",
+    "romImproved": "活動度進步",
+    "nightPain": "夜間疼痛",
+    "stairsDifficult": "上下樓梯困難",
+    "walkDistanceUp": "行走距離增加"
+  },
+  "objectiveNotes": {
+    "woundDryClean": "傷口乾燥清潔",
+    "woundRed": "傷口泛紅",
+    "swellingMild": "腫脹輕微",
+    "swellingModerate": "腫脹中度",
+    "gaitLimp": "步態：跛行",
+    "gaitNormal": "步態：正常",
+    "quadContractGood": "股四頭肌收縮良好",
+    "quadContractPoor": "股四頭肌收縮不佳",
+    "patellarMobilityLimited": "髕骨活動度受限"
+  },
+  "assessmentNotes": {
+    "progressNormal": "恢復進度正常",
+    "progressSlow": "恢復較預期慢",
+    "romPlateau": "ROM 停滯",
+    "painControlled": "疼痛控制良好",
+    "canAdvance": "可進階下一期",
+    "maintainPhase": "需維持目前階段"
+  },
+  "planNotes": {
+    "maintainRx": "維持目前處方",
+    "increaseFreq": "增加次數",
+    "addResistance": "加入阻力",
+    "reduceFreq": "降低頻率",
+    "followUp1w": "一週後回診",
+    "followUp2w": "兩週後回診",
+    "referBack": "轉介回主治醫師"
+  }
+}

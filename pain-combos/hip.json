@@ -1,0 +1,23 @@
+{
+  "_disclaimer": "Reference framework only. Not medical advice. Actual clinical decisions must be made by qualified healthcare professionals based on individual patient assessment.",
+  "id": "hip",
+  "procedure": "THA / Hip Fracture (Total Hip Arthroplasty / Hip Surgery)",
+  "techniques": [
+    {
+      "type": "nerve_block",
+      "blockSite": "fascia_iliaca",
+      "guidance": "ultrasound",
+      "medications": [
+        { "agent": "ropivacaine", "concentration": "0.3%", "volumeMl": 30, "route": "perineural" }
+      ]
+    },
+    {
+      "type": "nerve_block",
+      "blockSite": "lfcn",
+      "guidance": "ultrasound",
+      "medications": [
+        { "agent": "ropivacaine", "concentration": "0.25%", "volumeMl": 10, "route": "perineural" }
+      ]
+    }
+  ]
+}

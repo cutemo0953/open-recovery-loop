@@ -1,0 +1,16 @@
+{
+  "_disclaimer": "Reference framework only. Not medical advice. Actual clinical decisions must be made by qualified healthcare professionals based on individual patient assessment.",
+  "id": "intraosseous",
+  "procedure": "Intraosseous Injection (adjunct for arthroplasty / fracture fixation)",
+  "techniques": [
+    {
+      "type": "intraosseous_injection",
+      "blockSite": "",
+      "guidance": "",
+      "medications": [
+        { "agent": "morphine", "concentration": "", "volumeMl": 0, "totalDoseMg": 10, "route": "intraosseous" },
+        { "agent": "ketorolac", "concentration": "", "volumeMl": 0, "totalDoseMg": 30, "route": "intraosseous" }
+      ]
+    }
+  ]
+}

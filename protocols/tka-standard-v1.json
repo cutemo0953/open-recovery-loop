@@ -1,0 +1,174 @@
+{
+  "_disclaimer": "Reference framework only. Not medical advice. Actual clinical decisions must be made by qualified healthcare professionals based on individual patient assessment.",
+  "id": "tka-standard-v1",
+  "procedure": "TKA",
+  "name": "Total Knee Arthroplasty — Standard 5-Phase Protocol",
+  "version": "1.0",
+  "phases": [
+    {
+      "phase": 0,
+      "name": { "en": "Prehab", "zh": "術前準備" },
+      "startWeek": -8,
+      "endWeek": 0,
+      "goals": {
+        "en": ["Strengthen quadriceps", "Optimize ROM", "Understand post-op rehab"],
+        "zh": ["強化股四頭肌力量", "優化關節活動度", "了解術後復健流程"]
+      },
+      "tags": ["pre-op"],
+      "romTargets": {
+        "flexion": { "min": 0, "target": 0 },
+        "extension": { "min": 0, "target": 0 }
+      },
+      "exercises": [
+        { "exerciseId": "ex-quad-set", "sets": 3, "reps": 10, "holdSec": 5, "frequency": "2x/day" },
+        { "exerciseId": "ex-slr-flexion", "sets": 3, "reps": 10, "frequency": "2x/day" },
+        { "exerciseId": "ex-heel-slides", "sets": 3, "reps": 10, "frequency": "2x/day" },
+        { "exerciseId": "ex-mini-squats-wall", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-hamstring-curls", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-calf-raises", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-stationary-bike", "sets": 1, "reps": 1, "holdSec": 600, "frequency": "1x/day" },
+        { "exerciseId": "ex-hamstring-stretch", "sets": 3, "reps": 1, "holdSec": 30, "frequency": "1x/day" }
+      ],
+      "advancementCriteria": {
+        "minWeeks": 0,
+        "ptDecisionRequired": true,
+        "functionalGate": "surgery_scheduled"
+      }
+    },
+    {
+      "phase": 1,
+      "name": { "en": "Acute", "zh": "急性期" },
+      "startWeek": 0,
+      "endWeek": 2,
+      "goals": {
+        "en": ["Pain and edema control", "Early mobilization", "Weight bearing as tolerated"],
+        "zh": ["控制疼痛與腫脹", "早期活動", "負重行走"]
+      },
+      "tags": ["bed-ridden", "low-mobility", "inpatient"],
+      "romTargets": {
+        "flexion": { "min": 85, "target": 90 },
+        "extension": { "min": 0, "target": 0 }
+      },
+      "exercises": [
+        { "exerciseId": "ex-ankle-pumps", "sets": 3, "reps": 20, "frequency": "3x/day" },
+        { "exerciseId": "ex-quad-set", "sets": 3, "reps": 10, "holdSec": 5, "frequency": "3x/day" },
+        { "exerciseId": "ex-gluteal-sets", "sets": 3, "reps": 10, "holdSec": 5, "frequency": "2x/day" },
+        { "exerciseId": "ex-heel-slides", "sets": 3, "reps": 10, "frequency": "2x/day" },
+        { "exerciseId": "ex-saq", "sets": 3, "reps": 10, "frequency": "2x/day" },
+        { "exerciseId": "ex-slr-flexion", "sets": 3, "reps": 10, "frequency": "2x/day" },
+        { "exerciseId": "ex-slr-abduction", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-slr-adduction", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-patellar-mob", "sets": 1, "reps": 1, "holdSec": 120, "frequency": "2x/day" },
+        { "exerciseId": "ex-gait-training", "sets": 1, "reps": 1, "holdSec": 300, "frequency": "2x/day" }
+      ],
+      "restrictions": ["no_deep_squat", "no_kneeling", "WBAT_with_walker"],
+      "advancementCriteria": {
+        "minWeeks": 2,
+        "romFlexion": 90,
+        "romExtension": 0,
+        "painMax": 5,
+        "effusionMax": "mild",
+        "functionalGate": "transfer_independently",
+        "ptDecisionRequired": true
+      }
+    },
+    {
+      "phase": 2,
+      "name": { "en": "Subacute", "zh": "亞急性期" },
+      "startWeek": 2,
+      "endWeek": 6,
+      "goals": {
+        "en": ["Restore ROM", "Normalize gait", "Wean off assistive device"],
+        "zh": ["恢復關節活動度", "步態正常化", "脫離助行器"]
+      },
+      "romTargets": {
+        "flexion": { "min": 100, "target": 110 },
+        "extension": { "min": 0, "target": 0 }
+      },
+      "exercises": [
+        { "exerciseId": "ex-aa-knee-flexion", "sets": 3, "reps": 10, "frequency": "2x/day" },
+        { "exerciseId": "ex-calf-raises", "sets": 3, "reps": 15, "frequency": "1x/day" },
+        { "exerciseId": "ex-toe-raises", "sets": 3, "reps": 15, "frequency": "1x/day" },
+        { "exerciseId": "ex-wall-slides", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-mini-squats-60", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-step-ups", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-seated-knee-ext", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-prone-knee-flex", "sets": 3, "reps": 10, "frequency": "1x/day" },
+        { "exerciseId": "ex-stationary-bike", "sets": 1, "reps": 1, "holdSec": 600, "frequency": "1x/day" },
+        { "exerciseId": "ex-gait-training", "sets": 1, "reps": 1, "holdSec": 600, "frequency": "1x/day" }
+      ],
+      "restrictions": ["no_deep_squat", "no_kneeling", "no_impact"],
+      "advancementCriteria": {
+        "minWeeks": 6,
+        "romFlexion": 110,
+        "romExtension": 0,
+        "painMax": 3,
+        "effusionMax": "trace",
+        "functionalGate": "walk_without_assistive_device",
+        "ptDecisionRequired": true
+      }
+    },
+    {
+      "phase": 3,
+      "name": { "en": "Strengthening", "zh": "肌力強化期" },
+      "startWeek": 6,
+      "endWeek": 12,
+      "goals": {
+        "en": ["Functional strengthening", "Endurance building", "Return to daily activities"],
+        "zh": ["功能性肌力強化", "耐力提升", "回歸日常活動"]
+      },
+      "romTargets": {
+        "flexion": { "min": 115, "target": 120 },
+        "extension": { "min": 0, "target": 0 }
+      },
+      "exercises": [
+        { "exerciseId": "ex-leg-press", "sets": 3, "reps": 10, "frequency": "3x/week" },
+        { "exerciseId": "ex-squats-progressive", "sets": 3, "reps": 10, "frequency": "3x/week" },
+        { "exerciseId": "ex-step-ups", "sets": 3, "reps": 10, "frequency": "3x/week" },
+        { "exerciseId": "ex-step-downs", "sets": 3, "reps": 10, "frequency": "3x/week" },
+        { "exerciseId": "ex-single-leg-balance", "sets": 3, "reps": 1, "holdSec": 30, "frequency": "1x/day" },
+        { "exerciseId": "ex-stair-climbing", "sets": 1, "reps": 1, "holdSec": 300, "frequency": "1x/day" },
+        { "exerciseId": "ex-elliptical", "sets": 1, "reps": 1, "holdSec": 900, "frequency": "3x/week" },
+        { "exerciseId": "ex-sit-to-stand", "sets": 3, "reps": 10, "frequency": "1x/day" }
+      ],
+      "restrictions": ["no_high_impact_unless_cleared"],
+      "advancementCriteria": {
+        "minWeeks": 12,
+        "romFlexion": 120,
+        "romExtension": 0,
+        "painMax": 2,
+        "effusionMax": "none",
+        "functionalGate": "stair_reciprocal",
+        "ptDecisionRequired": true
+      }
+    },
+    {
+      "phase": 4,
+      "name": { "en": "Return to Function", "zh": "功能回復期" },
+      "startWeek": 12,
+      "endWeek": 26,
+      "goals": {
+        "en": ["Maintain strength and ROM", "Return to recreational activities", "Long-term self-management"],
+        "zh": ["維持肌力與活動度", "回歸休閒活動", "長期自我管理"]
+      },
+      "romTargets": {
+        "flexion": { "min": 120, "target": 125 },
+        "extension": { "min": 0, "target": 0 }
+      },
+      "exercises": [
+        { "exerciseId": "ex-single-leg-squat", "sets": 3, "reps": 8, "frequency": "3x/week" },
+        { "exerciseId": "ex-lateral-step-ups", "sets": 3, "reps": 10, "frequency": "3x/week" },
+        { "exerciseId": "ex-balance-board", "sets": 3, "reps": 1, "holdSec": 30, "frequency": "3x/week" },
+        { "exerciseId": "ex-walking-program", "sets": 1, "reps": 1, "holdSec": 1200, "frequency": "1x/day" },
+        { "exerciseId": "ex-stationary-bike", "sets": 1, "reps": 1, "holdSec": 1200, "frequency": "3x/week" },
+        { "exerciseId": "ex-swimming", "sets": 1, "reps": 1, "holdSec": 1200, "frequency": "2x/week" }
+      ],
+      "restrictions": ["avoid_high_impact_sports_unless_cleared"],
+      "advancementCriteria": {
+        "minWeeks": 26,
+        "ptDecisionRequired": true,
+        "functionalGate": "maintenance"
+      }
+    }
+  ]
+}

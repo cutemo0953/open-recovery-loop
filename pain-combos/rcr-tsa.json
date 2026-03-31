@@ -1,0 +1,23 @@
+{
+  "_disclaimer": "Reference framework only. Not medical advice. Actual clinical decisions must be made by qualified healthcare professionals based on individual patient assessment.",
+  "id": "rcr-tsa",
+  "procedure": "RCR / TSA (Rotator Cuff Repair / Total Shoulder Arthroplasty)",
+  "techniques": [
+    {
+      "type": "nerve_block",
+      "blockSite": "supraclavicular_brachial_plexus",
+      "guidance": "ultrasound",
+      "medications": [
+        { "agent": "ropivacaine", "concentration": "0.3%", "volumeMl": 20, "route": "perineural" }
+      ]
+    },
+    {
+      "type": "nerve_block",
+      "blockSite": "serratus_anterior",
+      "guidance": "ultrasound",
+      "medications": [
+        { "agent": "ropivacaine", "concentration": "0.25%", "volumeMl": 20, "route": "perineural" }
+      ]
+    }
+  ]
+}
