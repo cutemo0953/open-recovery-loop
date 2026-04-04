@@ -29,6 +29,7 @@
         { "exerciseId": "ex-stationary-bike", "sets": 1, "reps": 1, "holdSec": 600, "frequency": "1x/day" },
         { "exerciseId": "ex-hamstring-stretch", "sets": 3, "reps": 1, "holdSec": 30, "frequency": "1x/day" }
       ],
+      "evidenceTypes": ["self_report"],
       "advancementCriteria": {
         "minWeeks": 0,
         "ptDecisionRequired": true,
@@ -62,6 +63,7 @@
         { "exerciseId": "ex-gait-training", "sets": 1, "reps": 1, "holdSec": 300, "frequency": "2x/day" }
       ],
       "restrictions": ["no_deep_squat", "no_kneeling", "WBAT_with_walker"],
+      "evidenceTypes": ["video", "photo", "self_report"],
       "advancementCriteria": {
         "minWeeks": 2,
         "romFlexion": 90,
@@ -98,6 +100,7 @@
         { "exerciseId": "ex-gait-training", "sets": 1, "reps": 1, "holdSec": 600, "frequency": "1x/day" }
       ],
       "restrictions": ["no_deep_squat", "no_kneeling", "no_impact"],
+      "evidenceTypes": ["video", "photo", "self_report"],
       "advancementCriteria": {
         "minWeeks": 6,
         "romFlexion": 110,
@@ -132,6 +135,7 @@
         { "exerciseId": "ex-sit-to-stand", "sets": 3, "reps": 10, "frequency": "1x/day" }
       ],
       "restrictions": ["no_high_impact_unless_cleared"],
+      "evidenceTypes": ["video", "photo", "self_report"],
       "advancementCriteria": {
         "minWeeks": 12,
         "romFlexion": 120,
@@ -164,6 +168,7 @@
         { "exerciseId": "ex-swimming", "sets": 1, "reps": 1, "holdSec": 1200, "frequency": "2x/week" }
       ],
       "restrictions": ["avoid_high_impact_sports_unless_cleared"],
+      "evidenceTypes": ["video", "photo", "self_report"],
       "advancementCriteria": {
         "minWeeks": 26,
         "ptDecisionRequired": true,

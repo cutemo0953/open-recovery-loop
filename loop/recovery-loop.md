@@ -10,6 +10,12 @@ The Recovery Loop is a continuous clinical cycle for post-surgical rehabilitatio
 
 Each iteration produces data that informs the next clinical decision. The loop runs from post-operative day 1 through full recovery.
 
+When exercise evidence capture is available, the loop expands:
+
+**Evaluate → Prescribe → Exercise (with evidence) → Async Review → Re-evaluate**
+
+Evidence (video, photo, sensor data, or structured self-report) allows clinicians to review exercise execution asynchronously between visits, closing the gap between prescription and re-evaluation.
+
 ## The Four Steps
 
 ### 1. Evaluate
@@ -42,6 +48,7 @@ The patient performs the prescribed exercises and logs completion:
 - Tracked per session: which exercises, actual reps, pain during exercise, difficulty rating
 - Photo documentation (wound progression, swelling)
 - Daily VAS reporting (independent of exercise sessions)
+- **Exercise evidence** (optional): video of exercise execution, enabling asynchronous form check by clinician. Evidence types per phase are defined in the protocol schema (`evidenceTypes` field)
 
 ### 4. Re-evaluate
 

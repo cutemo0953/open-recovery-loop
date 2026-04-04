@@ -187,7 +187,15 @@
           "items": { "type": "string" },
           "description": "Activity restrictions during this phase."
         },
-        "advancementCriteria": { "$ref": "#/$defs/advancementCriteria" }
+        "advancementCriteria": { "$ref": "#/$defs/advancementCriteria" },
+        "evidenceTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["video", "photo", "sensor", "self_report"]
+          },
+          "description": "Types of exercise execution evidence supported in this phase. Implementations may use any combination to capture patient exercise performance for asynchronous clinician review."
+        }
       },
       "additionalProperties": false
     }
